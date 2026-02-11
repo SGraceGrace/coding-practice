@@ -1,4 +1,4 @@
-package main;
+package practice;
 
 public class StaticBlockExpl {
 

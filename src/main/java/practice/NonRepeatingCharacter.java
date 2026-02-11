@@ -1,4 +1,4 @@
-package org.example;
+package practice;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class NonRepeatingCharacter {
         String inputStr = sc.nextLine();
 
         char result = checkNonRepeatingCharacter(inputStr);
-        if(result == 0) {
+        if(result == '#') {
             System.out.println(-1);
         } else {
             System.out.println(result);
@@ -20,14 +20,6 @@ public class NonRepeatingCharacter {
 
     private static char checkNonRepeatingCharacter(String inputStr) {
         int n = inputStr.length();
-
-        if(n == 1) {
-            return inputStr.charAt(0);
-        }
-
-        if(n == 2 && inputStr.charAt(0) != inputStr.charAt(1)) {
-            return inputStr.charAt(0);
-        }
 
         for (int i = 0; i < n ; i++) {
             char c1 = inputStr.charAt(i);
@@ -42,6 +34,6 @@ public class NonRepeatingCharacter {
                 return c1;
             }
         }
-        return '\0';
+        return '#';
     }
 }
