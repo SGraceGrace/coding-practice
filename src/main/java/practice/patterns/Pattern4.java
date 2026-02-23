@@ -13,6 +13,10 @@ public class Pattern4 {
     pattern3(n);
     System.out.println();
     pattern4(n);
+    System.out.println();
+    pattern5(n);
+    System.out.println();
+    pattern6(n);
   }
 
   private static void pattern1(int n) {
@@ -94,6 +98,33 @@ public class Pattern4 {
       }
       for (int j = i; j > 0; j--) {
         System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+  private static void pattern5(int n) {
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n-1; j++) {
+        if(i == 0 || i == n-1) {
+          System.out.print("*");
+        } else if(j == 0 || j == n-2) {
+          System.out.print("*");
+        } else {
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+  private static void pattern6(int n) {
+    int l = (2*n)-1;
+    for (int i = 0; i < l; i++) {
+      for (int j = 0; j < l; j++) {
+        if(i == 0 || i == l) {
+          System.out.print(n);
+        } else {
+          System.out.print(n-j);
+        }
       }
       System.out.println();
     }
