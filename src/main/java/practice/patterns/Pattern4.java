@@ -116,7 +116,7 @@ public class Pattern4 {
       System.out.println();
     }
   }
-  private static void pattern6(int n) {
+  private static void pattern6(int n) {  //pending
     int l = (2*n)-1;
     for (int i = 0; i < l; i++) {
       for (int j = 0; j < l; j++) {
