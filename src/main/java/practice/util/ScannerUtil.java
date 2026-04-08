@@ -26,4 +26,12 @@ public class ScannerUtil {
 
     return arr;
   }
+
+  public static String scanString() {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter String: ");
+    String str = sc.nextLine();
+    System.out.println(str);
+    return str;
+  }
 }
