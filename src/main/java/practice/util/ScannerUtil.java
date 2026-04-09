@@ -34,4 +34,13 @@ public class ScannerUtil {
     System.out.println(str);
     return str;
   }
+
+  public static int scanInteger() {
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter value of n: ");
+    int n = sc.nextInt();
+
+    return n;
+  }
 }
