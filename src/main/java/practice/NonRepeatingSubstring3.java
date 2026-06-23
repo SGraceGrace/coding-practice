@@ -11,7 +11,8 @@ public class NonRepeatingSubstring3 {
     System.out.println("Enter input string : ");
     String inputStr = sc.nextLine();
 
-    System.out.println(checkNonRepeatingSubstring(inputStr));
+//    System.out.println(checkNonRepeatingSubstring(inputStr));
+    System.out.println(lengthOfLongestSubstring(inputStr));
   }
 
   private static int checkNonRepeatingSubstring(String str) {
@@ -25,6 +26,22 @@ public class NonRepeatingSubstring3 {
       if (map.containsKey(c)) {
         left = Math.max(left, map.get(c) + 1);
       }
+      map.put(c, right);
+      count = Math.max(count, right - left + 1);
+      right++;
+    }
+    return count;
+  }
+
+  public static int lengthOfLongestSubstring(String s) {
+    HashMap<Character, Integer> map = new HashMap<>();
+    int left = 0;
+    int right = 0;
+    int count = 0;
+    while (right < s.length()) {
+      char c = s.charAt(right);
+      if (map.containsKey(c))
+        left++;
       map.put(c, right);
       count = Math.max(count, right - left + 1);
       right++;
