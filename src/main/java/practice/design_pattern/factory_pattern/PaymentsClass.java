@@ -8,8 +8,7 @@ public class PaymentsClass {
 
   public static void main(String[] args) {
     PaymentFactory paymentFactory = new UPIPaymentFactory();
-    PaymentInterface payment = paymentFactory.createPayment();
-    System.out.println(payment.pay());
+    System.out.println(paymentFactory.payment());
   }
 
 }

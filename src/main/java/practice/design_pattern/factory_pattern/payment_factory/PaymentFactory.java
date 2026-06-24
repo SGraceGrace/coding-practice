@@ -2,7 +2,13 @@ package practice.design_pattern.factory_pattern.payment_factory;
 
 import practice.design_pattern.factory_pattern.payments.PaymentInterface;
 
-public interface PaymentFactory {
+public abstract class PaymentFactory {
 
-  public PaymentInterface createPayment();
+  protected abstract PaymentInterface createPayment();
+
+  public String payment() {
+    PaymentInterface paymentInterface = createPayment();
+
+    return paymentInterface.pay();
+  }
 }
