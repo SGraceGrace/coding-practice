@@ -1,0 +1,12 @@
+package practice.design_pattern.factory_pattern1.payment_factory;
+
+import practice.design_pattern.factory_pattern1.payments.PaymentInterface;
+import practice.design_pattern.factory_pattern1.payments.UPIPayment;
+
+public class UPIPaymentFactory extends PaymentFactory{
+
+  @Override
+  protected PaymentInterface createPayment() {
+    return new UPIPayment();
+  }
+}
