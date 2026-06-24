@@ -1,12 +1,12 @@
 package practice.design_pattern.factory_pattern1.payment_factory;
 
-import practice.design_pattern.factory_pattern1.payments.NetBankingPayment;
 import practice.design_pattern.factory_pattern1.payments.PaymentInterface;
+import practice.design_pattern.factory_pattern1.payments.UPIPayment;
 
-public class NetBankingPaymentFactory extends PaymentFactory{
+public class UPIPaymentProcessor extends PaymentProcessor {
 
   @Override
   protected PaymentInterface createPayment() {
-    return new NetBankingPayment();
+    return new UPIPayment();
   }
 }
