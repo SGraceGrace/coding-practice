@@ -6,7 +6,7 @@ import practice.design_pattern.factory_pattern1.payments.PaymentInterface;
 public class NetBankingPaymentProcessor extends PaymentProcessor {
 
   @Override
-  protected PaymentInterface createPayment() {
+  public PaymentInterface createPayment() {
     return new NetBankingPayment();
   }
 }

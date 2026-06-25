@@ -6,7 +6,7 @@ import practice.design_pattern.factory_pattern1.payments.UPIPayment;
 public class UPIPaymentProcessor extends PaymentProcessor {
 
   @Override
-  protected PaymentInterface createPayment() {
+  public PaymentInterface createPayment() {
     return new UPIPayment();
   }
 }
